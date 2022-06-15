@@ -5,8 +5,8 @@ const app = express();
 const https= require('https');
 const mailchimp = require('@mailchimp/mailchimp_marketing');
 mailchimp.setConfig({
-    apiKey:'4491af5c1fea9f0bbc95f7cd347a7b16-us8',
-    server:'us8'
+    apiKey:'***',
+    server:'***'
 });
 
 //for parsing url encoded data
@@ -26,7 +26,7 @@ app.post('/',function(req,res){
         email:email
     };
     //unique id
-    const listID='f6512a577f';
+    const listID='***';
     async function run(){
        const response=await mailchimp.lists.addListMember(listID,{
         email_address:suscribedUser.email,
